@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && node dist/bundle.js",
+    "start": "rimraf dist/ && webpack && node dist/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +17,15 @@
     "url": "https://github.com/asyasoft/ffmpeg-example/issues"
   },
   "homepage": "https://github.com/asyasoft/ffmpeg-example#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.16",
+    "fluent-ffmpeg": "^2.1.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "babel-loader": "^8.0.4",
+    "rimraf": "^2.6.2",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
   }
